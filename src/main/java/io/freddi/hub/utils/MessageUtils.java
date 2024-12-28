@@ -129,10 +129,8 @@ public class MessageUtils extends Utils<MessageUtils> {
     }
 
     public void broadcastDebugMessage(String message) {
-        broadcastDebugMessage(miniMessage().deserialize(message));
     }
 
     public void broadcastDebugMessage(Component message) {
-        hub.server().filterAudience(audience -> (audience instanceof Player player) && Utils.util(PlayerUtils.class).canDebug(player) || audience instanceof ConsoleCommandSource).sendMessage(toDebugMessage(message));
     }
 }
