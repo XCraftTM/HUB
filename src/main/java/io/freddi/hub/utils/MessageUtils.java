@@ -129,8 +129,10 @@ public class MessageUtils extends Utils<MessageUtils> {
     }
 
     public void broadcastDebugMessage(String message) {
+        //recipient.sendMessage(toDebugMessage(message));
     }
 
     public void broadcastDebugMessage(Component message) {
+        //recipient.sendMessage(toDebugMessage(message));
     }
 }
