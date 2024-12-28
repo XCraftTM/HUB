@@ -106,22 +106,22 @@ public class MessageUtils extends Utils<MessageUtils> {
     }
 
     public void sendDebugMessage(Audience recipient, String message) {
-        sendDebugMessage(recipient, miniMessage().deserialize(message));
+        //sendDebugMessage(recipient, miniMessage().deserialize(message));
     }
 
     public void sendDebugMessage(Audience recipient, Component message) {
         ConfigUtils configUtils = Utils.util(ConfigUtils.class);
         if (configUtils.config().debug.enabled && (((recipient instanceof Player player) && Utils.util(PlayerUtils.class).canDebug(player)) || recipient instanceof ConsoleCommandSource))
-            recipient.sendMessage(Component.empty().append(Component.text("[Debug]: ").style(Style.style(TextDecoration.BOLD, NamedTextColor.YELLOW))).append(message));
+            //recipient.sendMessage(Component.empty().append(Component.text("[Debug]: ").style(Style.style(TextDecoration.BOLD, NamedTextColor.YELLOW))).append(message));
     }
 
 
     public void sendDebugCommandMessage(Audience recipient, String message) {
-        sendDebugCommandMessage(recipient, Component.text(message));
+        //sendDebugCommandMessage(recipient, Component.text(message));
     }
 
     public void sendDebugCommandMessage(Audience recipient, Component message) {
-        recipient.sendMessage(toDebugMessage(message));
+        //recipient.sendMessage(toDebugMessage(message));
     }
 
     private Component toDebugMessage(Component message) {
